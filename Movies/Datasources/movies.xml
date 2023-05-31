@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Movies>
+  <Movie>
+    <Title>The Shawshank Redemption</Title>
+    <Year>1994</Year>
+    <Genre>Drama</Genre>
+    <Director>Frank Darabont</Director>
+    <Rating>9.3</Rating>
+  </Movie>
+  <Movie>
+    <Title>The Godfather</Title>
+    <Year>1972</Year>
+    <Genre>Crime, Drama</Genre>
+    <Director>Francis Ford Coppola</Director>
+    <Rating>9.2</Rating>
+  </Movie>
+  <Movie>
+    <Title>Pulp Fiction</Title>
+    <Year>1994</Year>
+    <Genre>Crime, Drama</Genre>
+    <Director>Quentin Tarantino</Director>
+    <Rating>8.9</Rating>
+  </Movie>
+  <Movie>
+    <Title>The Dark Knight</Title>
+    <Year>2008</Year>
+    <Genre>Action, Crime, Drama</Genre>
+    <Director>Christopher Nolan</Director>
+    <Rating>9</Rating>
+  </Movie>
+  <Movie>
+    <Title>Fight Club</Title>
+    <Year>1999</Year>
+    <Genre>Drama</Genre>
+    <Director>David Fincher</Director>
+    <Rating>8.8</Rating>
+  </Movie>
+  <Movie>
+    <Title>Schindler's List</Title>
+    <Year>1993</Year>
+    <Genre>Biography, Drama, History</Genre>
+    <Director>Steven Spielberg</Director>
+    <Rating>8.9</Rating>
+  </Movie>
+  <Movie>
+    <Title>Inception</Title>
+    <Year>2010</Year>
+    <Genre>Action, Adventure, Sci-Fi</Genre>
+    <Director>Christopher Nolan</Director>
+    <Rating>8.8</Rating>
+  </Movie>
+  <Movie>
+    <Title>The Lord of the Rings: The Fellowship of the Ring</Title>
+    <Year>2001</Year>
+    <Genre>Adventure, Drama, Fantasy</Genre>
+    <Director>Peter Jackson</Director>
+    <Rating>8.8</Rating>
+  </Movie>
+  <Movie>
+    <Title>Forrest Gump</Title>
+    <Year>1994</Year>
+    <Genre>Drama, Romance</Genre>
+    <Director>Robert Zemeckis</Director>
+    <Rating>8.8</Rating>
+  </Movie>
+  <Movie>
+    <Title>The Matrix</Title>
+    <Year>1999</Year>
+    <Genre>Action, Sci-Fi</Genre>
+    <Director>Lana Wachowski, Lilly Wachowski</Director>
+    <Rating>8.7</Rating>
+  </Movie>
+</Movies>

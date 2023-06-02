@@ -5,6 +5,7 @@
     <Year>1994</Year>
     <Genre>Drama</Genre>
     <Director>Frank Darabont</Director>
+    <Actors>Tim Robbins, Morgan Freeman</Actors>
     <Rating>9.3</Rating>
   </Movie>
   <Movie>
@@ -12,6 +13,7 @@
     <Year>1972</Year>
     <Genre>Crime, Drama</Genre>
     <Director>Francis Ford Coppola</Director>
+    <Actors>Marlon Brando, Al Pacino, James Caan</Actors>
     <Rating>9.2</Rating>
   </Movie>
   <Movie>
@@ -19,6 +21,7 @@
     <Year>1994</Year>
     <Genre>Crime, Drama</Genre>
     <Director>Quentin Tarantino</Director>
+    <Actors>John Travolta, Uma Thurman, Samuel L. Jackson</Actors>
     <Rating>8.9</Rating>
   </Movie>
   <Movie>
@@ -26,6 +29,7 @@
     <Year>2008</Year>
     <Genre>Action, Crime, Drama</Genre>
     <Director>Christopher Nolan</Director>
+    <Actors>Christian Bale, Heath Ledger, Aaron Eckhart</Actors>
     <Rating>9</Rating>
   </Movie>
   <Movie>
@@ -33,6 +37,7 @@
     <Year>1999</Year>
     <Genre>Drama</Genre>
     <Director>David Fincher</Director>
+    <Actors>Brad Pitt, Edward Norton, Helena Bonham Carter</Actors>
     <Rating>8.8</Rating>
   </Movie>
   <Movie>
@@ -40,6 +45,7 @@
     <Year>1993</Year>
     <Genre>Biography, Drama, History</Genre>
     <Director>Steven Spielberg</Director>
+    <Actors>Liam Neeson, Ralph Fiennes, Ben Kingsley</Actors>
     <Rating>8.9</Rating>
   </Movie>
   <Movie>
@@ -47,6 +53,7 @@
     <Year>2010</Year>
     <Genre>Action, Adventure, Sci-Fi</Genre>
     <Director>Christopher Nolan</Director>
+    <Actors>Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page</Actors>
     <Rating>8.8</Rating>
   </Movie>
   <Movie>
@@ -54,6 +61,7 @@
     <Year>2001</Year>
     <Genre>Adventure, Drama, Fantasy</Genre>
     <Director>Peter Jackson</Director>
+    <Actors>Elijah Wood, Ian McKellen, Orlando Bloom</Actors>
     <Rating>8.8</Rating>
   </Movie>
   <Movie>
@@ -61,6 +69,7 @@
     <Year>1994</Year>
     <Genre>Drama, Romance</Genre>
     <Director>Robert Zemeckis</Director>
+    <Actors>Tom Hanks, Robin Wright, Gary Sinise</Actors>
     <Rating>8.8</Rating>
   </Movie>
   <Movie>
@@ -68,6 +77,7 @@
     <Year>1999</Year>
     <Genre>Action, Sci-Fi</Genre>
     <Director>Lana Wachowski, Lilly Wachowski</Director>
+    <Actors>Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss</Actors>
     <Rating>8.7</Rating>
   </Movie>
 </Movies>

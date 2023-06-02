@@ -28,21 +28,19 @@ namespace Movies.Controllers
         }
 
         [HttpGet("convertToXml")]
-        public IActionResult ConvertToJson()
+        public IActionResult ConvertToXml()
         {
             // Convert the movieList to XML
             XElement xmlMovies = new XElement("Movies",
-
                 movieList.Select(movie => new XElement("Movie",
                     new XElement("Title", movie.Title),
                     new XElement("Year", movie.Year),
                     new XElement("Genre", movie.Genre),
                     new XElement("Director", movie.Director),
-                    new XElement("Actors", movie.Actors),
+                    new XElement("Actors", string.Join(", ", movie.Actors)),
                     new XElement("Rating", movie.Rating)
                 ))
             );
-
 
             Response.ContentType = "application/xml";
 
@@ -80,7 +78,7 @@ namespace Movies.Controllers
                     sortedMovies = sortedMovies.OrderBy(movie => movie.Actors).ToList();
                     break;
                 case "rating":
-                    sortedMovies = sortedMovies.OrderBy(movie => movie.Rating).ToList();
+                    sortedMovies = sortedMovies.OrderByDescending(movie => movie.Rating).ToList();
                     break;
                 default:
                     return BadRequest("Invalid sort parameter.");
@@ -91,12 +89,13 @@ namespace Movies.Controllers
 
         [HttpGet("search")]
         public ActionResult<List<Movie>> SearchMovies(
-            [FromQuery] string title,
-            [FromQuery] int? year,
-            [FromQuery] string genre,
-            [FromQuery] string director,
-            [FromQuery] string ratingOperator,
-            [FromQuery] double? ratingValue)
+       [FromQuery] string? title,
+       [FromQuery] int? year,
+       [FromQuery] string? genre,
+       [FromQuery] string? director,
+       [FromQuery] string? actors,
+       [FromQuery] string? ratingOperator,
+       [FromQuery] double? ratingValue)
         {
             var filteredMovies = movieList;
 
@@ -120,23 +119,42 @@ namespace Movies.Controllers
                 filteredMovies = filteredMovies.Where(movie => movie.Director.ToLower().Contains(director.ToLower())).ToList();
             }
 
+            if (!string.IsNullOrEmpty(actors))
+            {
+                filteredMovies = filteredMovies.Where(movie => movie.Actors.Any(actor => actor.ToLower().Contains(actors.ToLower()))).ToList();
+            }
+
             if (!string.IsNullOrEmpty(ratingOperator) && ratingValue.HasValue)
             {
                 switch (ratingOperator.ToLower())
                 {
-                    case "gt": // Greater than
+                    case ">": // Greater than
                         filteredMovies = filteredMovies.Where(movie => movie.Rating > ratingValue.Value).ToList();
                         break;
-                    case "lt": // Less than
+                    case "<": // Less than
                         filteredMovies = filteredMovies.Where(movie => movie.Rating < ratingValue.Value).ToList();
+                        break;
+                    case "=": // Equal to
+                        filteredMovies = filteredMovies.Where(movie => movie.Rating == ratingValue.Value).ToList();
                         break;
                     default:
                         return BadRequest("Invalid rating operator.");
                 }
             }
 
+            // Check if any filters were applied
+            if (string.IsNullOrEmpty(title) && !year.HasValue && string.IsNullOrEmpty(genre) && string.IsNullOrEmpty(director) &&
+                string.IsNullOrEmpty(actors) && (string.IsNullOrEmpty(ratingOperator) || !ratingValue.HasValue))
+            {
+                return BadRequest("At least one search parameter is required.");
+            }
+
             return Ok(filteredMovies);
         }
+
+
+
+
     }
 }
 
